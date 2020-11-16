@@ -1,0 +1,15 @@
+h1 {
+text-align:center; color:blue; text-transform: uppercase;
+background-color: beige;}
+h3{
+    text-align:right;
+    font-size:50px;
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+body{
+background-image:ur1("https://ss.thgim.com/football/article30894486.ece/alternates/FREE_690/GettyImages-1000311406jpg")
+background-repeat : repeat-x;
+background-position: center;
+
+}
