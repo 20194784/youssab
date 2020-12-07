@@ -33,7 +33,7 @@ li a.active{
     background-color:green;
     color:white;
 }
-div{
+div:not(.searchbar,#mytable){
     border:5px;
     border-style:dashed;
     border-radius:20px;
@@ -46,14 +46,34 @@ table{
     border-collapse:collapse;
 
 }
-thread{
+thead{
     background-color:green;
     color:white;
 
 
 }
-theard tr{
+thead tr{
     text-align:center;
 
 }
-tbody tr:nth-child(even)
+tbody tr:nth-child(even){
+    background-color: lightgrey;
+}
+.searchbar{
+    width:20%;
+    height: auto;
+    border:1px;
+    border-color:lightgrey;
+    border-style: solid;
+    padding: 0px 10px;
+    margin: 8px auto;
+    border-radius: 24px;
+    display:flexbox;
+}
+.searchbox{
+    width:80%;
+    padding:8px 8px;
+    border:none;
+    margin: 0 2px;
+    outline:none;
+}

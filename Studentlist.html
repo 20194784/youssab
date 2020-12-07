@@ -2,9 +2,13 @@
 <head>
 	<title>studentlist</title>
 	<link rel="stylesheet" type ="text/css" href="style.css">
+	<script>
+		var arr=[['20194784','youssab','flut','user.png'],['20204784','kemo','fcit','user.png']]
+	</script>
 </head>
 
-
+<body onload="init();">
+<nav>
 <ul>
 	
 	<li><a href="index.html"target="blank"class="acive">home</a></li>
@@ -12,42 +16,55 @@
 	<li><a href="newstudent.html">new student </a></li>
 	<li class="nav-right"><a href="#" target="blank">logout</a></li>
 	</ul>
+</nav>
 <hr>
-<table border="1">
-	<thead>
-<tr>
-	<td>id</td>
-	<td>name</td>
-	<td>faculty</td>
-<td>image</td>
-</tr>
-	</thead>
-	<body>
-		<tr>
-	<td r="2">20194784</td>
-	<td>youssab</td> 
-	<td>flut</td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/120px-User_icon_2.svg.png" alt="usrer" width ="30px"></td>
 
-</tr>
-<tr>
-	
-<td>20204784</td>
-<td>kemo</td>
-<td>fcit</td>
-<td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/120px-User_icon_2.svg.png"alt = "user" width = "30px"</td>
-</tr>
+<div class = "searchbar">
+	<input type= "search"
+	class="searchnox">
+</div>
+
+
+<div id="mytable"></div>
+<hr>
+
+<script>
+ function init(){
+               var count=0;
+               var mytable='';
+               mytable+='<table border="1">';
+               mytable+='<thead>'+'<tr>'+
+                           '<td>ID</td>'+
+                        '<td>Name</td>'+
+                        '<td>Faculty</td>'+
+                        '<td>image</td>'+
+                        '</tr>'+
+                        '</thead>'+
+                        '<tbody>';
+                        for(let i=0;i<arr.length;i++){
+                            var studentID=arr[i][0];
+                            var studentName=arr[i][1];
+                            var studentFaculty=arr[i][2];
+                            var studentImage=arr[i][3];
+
+                            mytable+='<tr><td>'+studentID+'</td>'+
+                                     '<td>'+studentName+'</td>'+
+                                     '<td>'+studentFaculty+'</td>'+
+						'<td>'+'<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/120px-User_icon_2.svg.png//'+studentimage+'" alt="usrer" width ="30px">'+'</td></tr>'
+                      count++;
+                         mytable+='</tbody>';
+                        mytable+='<tfoot><tr><td colspan="2">Total no. of Students:'+count+'</td></tr></tfoot></table>';
+
+                            document.getElementById("mytable").innerHTML= mytable ;
+		}
+}
+
+</script>
+
+
+
+
 </body>
-
-<hr>
-<tfoot>
-	<tr>
-	<td colspan="4">TOTAL NUMBER OF STUDENTS =2</td>
-	</tr>
-</tfoot>
-</table>
-
-<hr>
 
 <footer>Copy rights &copy; &nbsp; <a href="https://www.fue.edu.eg/">future universty</a>  
 	&nbsp;&mdash;
